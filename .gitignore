@@ -1,0 +1,4 @@
+setup/.env.setup
+setup/node_modules/
+.env.local
+.claude/settings.json
