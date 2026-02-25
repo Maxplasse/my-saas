@@ -619,9 +619,10 @@ Ensure these are gitignored (create `.gitignore` if it doesn't exist):
 setup/.env.setup
 setup/node_modules/
 .env.local
+.claude/settings.json
 ```
 
-> **Never commit `.env.setup`.** It contains plaintext passwords.
+> **Never commit `.env.setup` or `.claude/settings.json`.** They contain plaintext passwords and tokens.
 
 ---
 
@@ -926,7 +927,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
         run: npm ci
